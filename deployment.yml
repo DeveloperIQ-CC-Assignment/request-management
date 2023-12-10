@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: request-management-service
-          image: gcr.io/cc-assignment-01-407011/user-management-service:prod
+          image: gcr.io/cc-assignment-01-407011/request-management-service:prod
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
