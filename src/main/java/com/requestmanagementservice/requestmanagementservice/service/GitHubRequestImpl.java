@@ -1,7 +1,9 @@
 package com.requestmanagementservice.requestmanagementservice.service;
 
 import com.requestmanagementservice.requestmanagementservice.dto.GitHubRequestDto;
+import com.requestmanagementservice.requestmanagementservice.dto.UserDto;
 import com.requestmanagementservice.requestmanagementservice.model.GitHubRequest;
+import com.requestmanagementservice.requestmanagementservice.model.User;
 import com.requestmanagementservice.requestmanagementservice.repository.GitHubRequestRepository;
 import com.requestmanagementservice.requestmanagementservice.service.external.GitHubExternalClient;
 import lombok.AllArgsConstructor;
@@ -45,7 +47,7 @@ public class GitHubRequestImpl implements GitHubRequestService{
         return GitHubRequest.builder()
                 .node_id(gitHubRequestDto.getNodeId())
                 .number(gitHubRequestDto.getNumber())
-                .login(gitHubRequestDto.getUserDto().getLogin())
+                .user(User.builder().login(gitHubRequestDto.getUserDto().getLogin()).build())
                 .body(gitHubRequestDto.getBody())
                 .build();
     }

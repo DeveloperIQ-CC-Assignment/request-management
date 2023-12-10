@@ -19,7 +19,7 @@ public class GitHubRequestDto {
     @JsonProperty("body")
     private String body;
 
-    @JsonProperty("login")
+    @JsonProperty("user")
     private UserDto userDto;
 
 
