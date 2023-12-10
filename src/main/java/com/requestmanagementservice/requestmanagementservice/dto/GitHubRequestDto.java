@@ -9,10 +9,19 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class GitHubRequestDto {
+
     @JsonProperty("node_id")
     private String nodeId;
 
     @JsonProperty("number")
     private int number;
+
+    @JsonProperty("body")
+    private String body;
+
+    @JsonProperty("login")
+    private UserDto userDto;
+
+
 
 }

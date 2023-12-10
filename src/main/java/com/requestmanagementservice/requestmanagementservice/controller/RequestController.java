@@ -26,4 +26,7 @@ public class RequestController {
     public ResponseEntity<List<GitHubRequest>> getAllRequests() {
         return ResponseEntity.ok(this.gitHubRequestService.getAllRequests());
     }
+
+
+
 }

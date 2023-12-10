@@ -19,4 +19,9 @@ public class GitHubRequest {
     private String node_id;
 
     private int number;
+
+    private String body;
+
+    private String login;
+
 }
